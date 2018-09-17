@@ -1,0 +1,23 @@
+allprojects {
+    buildscript {
+        ext {
+            springBootVersion = '2.0.5.RELEASE'
+        }
+        repositories {
+            jcenter()
+            mavenCentral()
+        }
+        dependencies {
+            classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
+        }
+    }
+}
+
+subprojects {
+    group 'com.shumei.cloud'
+    version '1.0.1'
+
+    repositories {
+        mavenCentral()
+    }
+}
