@@ -12,6 +12,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class JokeServiceApplication
 {
+    /**
+     * 笑话大全微服务启动入口
+     *
+     * @author Eden Zhang 2018/9/23
+     */
     public static void main(String[] args)
     {
         SpringApplication.run(JokeServiceApplication.class, args);
