@@ -7,3 +7,6 @@
 # RabbitMQ
 - https://blog.csdn.net/wayne_primes/article/details/79034126
 - https://www.cnblogs.com/limich/p/7499984.html
+- http://huan1993.iteye.com/blog/2425170
+- https://blog.csdn.net/a60782885/article/details/70173787#
+- https://www.rabbitmq.com/which-erlang.html
