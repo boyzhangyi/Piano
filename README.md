@@ -10,3 +10,4 @@
 - http://huan1993.iteye.com/blog/2425170
 - https://blog.csdn.net/a60782885/article/details/70173787#
 - https://www.rabbitmq.com/which-erlang.html
+- https://www.cnblogs.com/aheizi/p/5778369.html
