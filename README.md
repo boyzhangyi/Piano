@@ -22,3 +22,10 @@
 
 # 动态污点分析
 - http://www.jsjkx.com/jsjkx/ch/reader/create_pdf.aspx?file_no=201611A076&year_id=2016&quarter_id=11A&falg=1
+
+
+# 深度学习
+- https://github.com/exacity/deeplearningbook-chinese/releases
+- https://download.csdn.net/download/cc13554658826/10144408
+- https://download.csdn.net/download/weixin_42398870/10713188
+- https://download.csdn.net/download/qianweifeng123/10281860
