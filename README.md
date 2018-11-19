@@ -12,6 +12,8 @@
 - https://www.rabbitmq.com/which-erlang.html
 - https://www.cnblogs.com/aheizi/p/5778369.html
 - https://www.jianshu.com/p/1621becd3c4a
+- https://blog.csdn.net/wayne_primes/article/details/79034126
+- https://www.cnblogs.com/limich/p/7499984.html
 
 
 # 前后端分离Demo
