@@ -1,4 +1,7 @@
+> **Talk is cheap. Show me the code!**
+
 # Piano
+
 
 # 配置项加密存储，运行时解密
 - https://stackoverflow.com/questions/40079293/configuring-ssl-keys-for-spring-cloud-config-server/41524875#41524875%EF%BC%89
@@ -14,6 +17,8 @@
 - https://www.jianshu.com/p/1621becd3c4a
 - https://blog.csdn.net/wayne_primes/article/details/79034126
 - https://www.cnblogs.com/limich/p/7499984.html
+- https://my.oschina.net/buwei/blog/1553494
+- https://github.com/dturanski/event-handler-annotation-demo/
 
 
 # 前后端分离Demo
