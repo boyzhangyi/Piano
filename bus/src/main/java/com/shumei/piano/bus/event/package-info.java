@@ -4,4 +4,4 @@
  * @author Eden Zhang 2018/9/23
  * @version Piano V1.0.1
  */
-package com.shumei.piano.bus.json;
+package com.shumei.piano.bus.event;
