@@ -1,4 +1,4 @@
-archivesBaseName = "shumei-joke"
+archivesBaseName = "shumei-bus"
 
 dependencies {
     compile "com.google.code.gson:gson"

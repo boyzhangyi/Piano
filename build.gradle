@@ -1,23 +1,61 @@
-allprojects {
-    buildscript {
-        ext {
-            springBootVersion = '2.0.5.RELEASE'
-        }
-        repositories {
-            jcenter()
-            mavenCentral()
-        }
-        dependencies {
-            classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
-        }
+buildscript {
+    ext {
+        springBootVersion = '2.1.1.RELEASE'
+        springCloudVersion = 'Finchley.RELEASE'
+    }
+
+    repositories {
+        mavenLocal()
+        maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
+        maven { url "http://mvnrepository.com/" }
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "io.spring.gradle:dependency-management-plugin:1.0.6.RELEASE"
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
     }
 }
 
+allprojects {
+    group 'com.shumei.piano'
+    version '1.0.0.SNAPSHOT'
+
+    ext {
+        springBootVersion = '2.1.1.RELEASE'
+        springCloudVersion = 'Finchley.RELEASE'
+    }
+}
+
+
 subprojects {
-    group 'com.shumei.cloud'
-    version '1.0.1'
+    apply plugin: 'java'
+    apply plugin: "jacoco"
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    tasks.withType(JavaCompile) {
+        options.encoding = 'UTF-8'
+    }
 
     repositories {
+        mavenLocal()
+        maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
+        maven { url "http://mvnrepository.com/" }
         mavenCentral()
+    }
+
+    dependencies {
+        testCompile 'junit:junit:4.12'
+        testCompile('org.springframework.boot:spring-boot-starter-test')
+    }
+
+    dependencyManagement {
+        imports {
+            mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+        }
     }
 }
