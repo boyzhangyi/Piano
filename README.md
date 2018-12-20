@@ -48,7 +48,6 @@
 
 #Jetbrains Intellij IDEA激活
 https://blog.csdn.net/HALEN001/article/details/81137092
-https://blog.csdn.net/qq_27101653/article/details/82757981
 
 # 电子书网站
 - http://www.banshujiang.cn/ 搬书匠
