@@ -46,6 +46,10 @@
 -   在 2017年LinuxIDC.com/2月/Java 8实战(Java 8 in Action) 高清晰PDF中文完整版+随书源码/
 
 
+#Jetbrains Intellij IDEA激活
+https://blog.csdn.net/HALEN001/article/details/81137092
+https://blog.csdn.net/qq_27101653/article/details/82757981
+
 # 电子书网站
 - http://www.banshujiang.cn/ 搬书匠
 - http://down.51cto.com/search.php 51CTO
