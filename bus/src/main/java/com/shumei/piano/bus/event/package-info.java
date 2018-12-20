@@ -1,7 +1,7 @@
 /**
- * Json数据对象包
+ * 事件定义包
  *
- * @author Eden Zhang 2018/9/23
- * @version Piano V1.0.1
+ * @author Zhang Yi on 2018/12/20
+ * @version Piano V1.0.0
  */
 package com.shumei.piano.bus.event;

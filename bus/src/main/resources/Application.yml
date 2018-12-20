@@ -1,0 +1,33 @@
+spring:
+  rabbitmq:
+    host: 0.0.0.0
+    port: 5672
+    username: luthier
+    password: {cipher}223666
+
+  cloud:
+    stream:
+      bindings:
+        dataCollectInput:
+          group: dataCollectReceiver
+          destination: dataCollectBus
+
+        dataCollectOutput:
+          destination: dataCollectBus
+
+      rabbit:
+        bindings:
+          dataCollectInput:
+            consumer:
+              bindingRoutingKey: payload.eventType==
+              maxPriority: 100
+
+          dataCollectOutput:
+            producer:
+              routingKeyExpression: "'payload.eventType=='"
+
+
+
+
+
+from: Piano V1.0.0
