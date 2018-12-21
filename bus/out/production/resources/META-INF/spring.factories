@@ -1,2 +1,0 @@
-org.springframework.boot.autoconfigure.EnableutoConfiguration=\
-com.shumei.piano.autoconfigure.EventHandlerAutoConfiguration
