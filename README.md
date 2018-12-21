@@ -19,6 +19,7 @@
 - https://www.cnblogs.com/limich/p/7499984.html
 - https://my.oschina.net/buwei/blog/1553494
 - https://github.com/dturanski/event-handler-annotation-demo/
+- https://blog.csdn.net/songhaifengshuaige/article/details/79275479
 
 
 # 前后端分离Demo
