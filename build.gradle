@@ -49,7 +49,8 @@ subprojects {
     }
 
     dependencies {
-        testCompile 'junit:junit:4.12'
+        compile "org.apache.commons:commons-lang3"
+        
         testCompile('org.springframework.boot:spring-boot-starter-test')
     }
 
@@ -58,4 +59,23 @@ subprojects {
             mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
         }
     }
+
+    jar {
+        manifest {
+            attributes (
+                    'Implementation-Title': project.name,
+                    'Implementation-Version': version,
+                    'Implementation-Vendor': "ShuMei Technologies Co.,Ltd."
+            )
+        }
+    }
+
+    jacocoTestReport {
+        reports {
+            xml.enabled false
+            html.enabled true
+        }
+    }
+
+    check.dependsOn jacocoTestReport
 }

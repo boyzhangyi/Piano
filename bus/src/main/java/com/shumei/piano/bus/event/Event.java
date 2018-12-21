@@ -9,7 +9,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * 事件注解
+ * 总线事件注解
  *
  * @author Zhang Yi on 2018/12/20
  * @version Piano V1.0.0
@@ -25,7 +25,7 @@ public @interface Event
      * @return 事件名称
      * @author Zhang Yi on 2018/12/20
      */
-    @AliasFor("eventName")
+    @AliasFor("eventType")
     String value() default "";
 
     /**
@@ -35,5 +35,5 @@ public @interface Event
      * @author Zhang Yi on 2018/12/20
      */
     @AliasFor("value")
-    String eventName() default "";
+    String eventType() default "";
 }

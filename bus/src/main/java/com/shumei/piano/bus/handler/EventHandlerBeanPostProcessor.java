@@ -2,11 +2,11 @@ package com.shumei.piano.bus.handler;
 
 import com.shumei.piano.bus.event.BusEvent;
 import com.shumei.piano.bus.event.Event;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.cloud.stream.annotation.StreamListener;
 import org.springframework.cloud.stream.binding.StreamListenerAnnotationBeanPostProcessor;
 import org.springframework.core.annotation.AnnotationUtils;
 import org.springframework.util.Assert;
-import org.springframework.util.StringUtils;
 
 import java.lang.reflect.Method;
 import java.util.HashMap;
@@ -45,11 +45,12 @@ public class EventHandlerBeanPostProcessor extends StreamListenerAnnotationBeanP
 
         Class<? extends BusEvent> eventClass = eventHandler.eventClass();
         Event event = AnnotationUtils.findAnnotation(eventClass, Event.class);
-
         Assert.isTrue(event != null, "No eventClass name is configured. Use the @Event value.");
-        Assert.isTrue(!StringUtils.isEmpty(event.value()), "The @Event annotation must have the eventClass name as value.");
 
-        String spelExpression = String.format(EVENT_SPEL_PATTERN, event.value());
+        String eventType = event.value();
+        Assert.isTrue(StringUtils.isNotEmpty(eventType), "The @Event annotation must have the eventClass name as value.");
+
+        String spelExpression = String.format(EVENT_SPEL_PATTERN, eventType);
         attributes.put("condition", spelExpression);
         attributes.put("target", EventSink.INPUT);
         return AnnotationUtils.synthesizeAnnotation(attributes, StreamListener.class, annotatedMethod);

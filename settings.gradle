@@ -1,4 +1,6 @@
-rootProject.name = 'piano'
+rootProject.name = 'Piano'
 
+include 'eureka-server'
+include 'config'
 include 'bus'
 include 'joke'

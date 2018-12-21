@@ -19,12 +19,10 @@ spring:
         bindings:
           dataCollectInput:
             consumer:
-              bindingRoutingKey: payload.eventType==
               maxPriority: 100
 
           dataCollectOutput:
             producer:
-              routingKeyExpression: "'payload.eventType=='"
 
 
 
