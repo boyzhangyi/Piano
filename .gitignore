@@ -28,5 +28,6 @@ hs_err_pid*
 *.iml
 
 # Gradle files
+out
 build
 .gradle
