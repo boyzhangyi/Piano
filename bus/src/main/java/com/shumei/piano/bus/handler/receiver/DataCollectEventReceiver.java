@@ -11,7 +11,7 @@ import org.springframework.cloud.stream.annotation.EnableBinding;
  * 数据采集事件接收器
  *
  * @author Zhang Yi on 2018/12/20
- * @version Piano V1.0.0
+ * @version Piano 1.0.0
  */
 @EnableBinding(EventSink.class)
 public class DataCollectEventReceiver

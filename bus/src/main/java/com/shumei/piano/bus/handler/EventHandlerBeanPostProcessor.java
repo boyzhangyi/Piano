@@ -16,7 +16,7 @@ import java.util.Map;
  * 重写StreamListener注解初始化配置器
  *
  * @author Zhang Yi on 2018/12/20
- * @version Piano V1.0.0
+ * @version Piano 1.0.0
  */
 public class EventHandlerBeanPostProcessor extends StreamListenerAnnotationBeanPostProcessor
 {

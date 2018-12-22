@@ -20,8 +20,8 @@ import java.util.Map;
 /**
  * 聚合数据平台笑话大全服务
  *
- * @author Eden Zhang 2018/9/23
- * @version Piano V1.0.1
+ * @author Zhang Yi on 2018/9/23
+ * @version Piano 1.0.0
  */
 @RestController
 @RequestMapping(value = "joke")
@@ -48,7 +48,7 @@ public class JokeController
      * @param sort 类型，desc:指定时间之前发布的，asc:指定时间之后发布的
      * @param time 时间戳（10位），如：1418816972
      * @return 笑话
-     * @author Eden Zhang 2018/9/23
+     * @author Zhang Yi on 2018/9/23
      */
     @RequestMapping(value = "getSortedJokes", method = RequestMethod.GET)
     public JsonResult<List<JokeResult>> getSortedJokes(Integer pageNum, Integer pageSize, String sort, String time)
@@ -87,7 +87,7 @@ public class JokeController
      * @param pageNum  分页页码
      * @param pageSize 每页数量
      * @return 最近的笑话
-     * @author Eden Zhang 2018/9/23
+     * @author Zhang Yi on 2018/9/23
      */
     @RequestMapping(value = "getLatestJokes", method = RequestMethod.GET)
     public JsonResult<List<JokeResult>> getLatestJokes(Integer pageNum, Integer pageSize)
@@ -124,7 +124,7 @@ public class JokeController
      * 随机获取笑话
      *
      * @return 笑话
-     * @author Eden Zhang 2018/9/23
+     * @author Zhang Yi on 2018/9/23
      */
     @RequestMapping(value = "getRandomJokes", method = RequestMethod.GET)
     public JsonResult<List<JokeResult>> getRandomJokes()

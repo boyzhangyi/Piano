@@ -3,8 +3,8 @@ package com.shumei.piano.joke.json;
 /**
  * Json数据返回状态
  *
- * @author Eden Zhang 2018/9/23
- * @version Piano V1.0.1
+ * @author Zhang Yi on 2018/9/23
+ * @version Piano 1.0.0
  */
 public enum ResultType
 {

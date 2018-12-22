@@ -7,7 +7,7 @@ import org.springframework.messaging.MessageChannel;
  * 事件发布通道定义
  *
  * @author Zhang Yi on 2018/12/20
- * @version Piano V1.0.0
+ * @version Piano 1.0.0
  */
 public interface EventSource
 {

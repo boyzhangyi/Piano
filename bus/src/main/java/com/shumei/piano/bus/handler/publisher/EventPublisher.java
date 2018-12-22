@@ -17,7 +17,7 @@ import org.springframework.util.Assert;
  * 事件发布
  *
  * @author Zhang Yi on 2018/12/20
- * @version Piano V1.0.0
+ * @version Piano 1.0.0
  */
 @EnableBinding(EventSource.class)
 public class EventPublisher

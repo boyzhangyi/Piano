@@ -7,7 +7,7 @@ import org.springframework.messaging.SubscribableChannel;
  * 事件接收通道定义
  *
  * @author Zhang Yi on 2018/12/20
- * @version Piano V1.0.0
+ * @version Piano 1.0.0
  */
 public interface EventSink
 {

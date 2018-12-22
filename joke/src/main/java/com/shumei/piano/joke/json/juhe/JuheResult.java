@@ -5,8 +5,8 @@ import com.google.gson.annotations.SerializedName;
 /**
  * 聚合数据平台返回Json数据对象
  *
- * @author Eden Zhang 2018/9/23
- * @version Piano V1.0.1
+ * @author Zhang Yi on 2018/9/23
+ * @version Piano 1.0.0
  */
 public class JuheResult<T>
 {

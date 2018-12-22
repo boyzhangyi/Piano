@@ -7,7 +7,7 @@ import org.springframework.core.annotation.AliasFor;
  * 事件处理注解
  *
  * @author Zhang Yi on 2018/12/20
- * @version Piano V1.0.0
+ * @version Piano 1.0.0
  */
 public @interface EventHandler
 {

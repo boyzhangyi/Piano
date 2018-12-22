@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
  * 事件处理器自动化配置
  *
  * @author Zhang Yi on 2018/12/20
- * @version Piano V1.0.0
+ * @version Piano 1.0.0
  */
 @Configuration
 @AutoConfigureAfter(BindingServiceConfiguration.class)
