@@ -4,6 +4,8 @@
 
 # Spring Cloud 1.0 升级 2.0 指导
 - https://blog.csdn.net/qq_36752632/article/details/79497130
+- https://gitee.com/lwydyby/springcloud-adplatform
+
 
 # 配置项加密存储，运行时解密
 - https://stackoverflow.com/questions/40079293/configuring-ssl-keys-for-spring-cloud-config-server/41524875#41524875%EF%BC%89
