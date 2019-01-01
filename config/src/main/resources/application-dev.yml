@@ -3,12 +3,11 @@ server:
 
 eureka:
   instance:
-    hostname: 192.168.136.134
+    hostname: 127.0.0.1
   client:
     register-with-eureka: false
     fetch-registry: false
-    service-url:
-      defaultZone: http://192.168.136.134:${server.port}/eureka
+
 
 
 from: Piano 1.0.0
