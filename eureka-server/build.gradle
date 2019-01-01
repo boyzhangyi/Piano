@@ -1,7 +1,6 @@
 archivesBaseName = "eureka-server"
 
 dependencies {
-    compile "javax.xml.bind:jaxb-api"
     compile "org.glassfish.jaxb:jaxb-runtime"
 
     compile "org.springframework.boot:spring-boot-starter-security"
