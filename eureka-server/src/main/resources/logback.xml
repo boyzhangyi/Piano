@@ -20,7 +20,7 @@
         </filter>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!--日志文件输出的文件名-->　　　　　　　
-            <fileNamePattern>${APP_HOME}/logs/eureka-error-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <fileNamePattern>${APP_HOME}/logs/eureka-server_error_%d{yyyy-MM-dd}.log</fileNamePattern>
             <!--日志文件保留天数-->
             <maxHistory>30</maxHistory>
         </rollingPolicy>
@@ -43,7 +43,7 @@
         </filter>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!--日志文件输出的文件名-->　　　　　　　
-            <fileNamePattern>${APP_HOME}/logs/eureka-warn-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <fileNamePattern>${APP_HOME}/logs/eureka-server_warn_%d{yyyy-MM-dd}.log</fileNamePattern>
             <!--日志文件保留天数-->
             <maxHistory>30</maxHistory>
         </rollingPolicy>
@@ -66,7 +66,7 @@
         </filter>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!--日志文件输出的文件名-->　　　　　　　
-            <fileNamePattern>${APP_HOME}/logs/eureka-info-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <fileNamePattern>${APP_HOME}/logs/eureka-server_info_%d{yyyy-MM-dd}.log</fileNamePattern>
             <!--日志文件保留天数-->
             <maxHistory>30</maxHistory>
         </rollingPolicy>
@@ -89,7 +89,7 @@
         </filter>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!--日志文件输出的文件名-->　　　　　　　
-            <fileNamePattern>${APP_HOME}/logs/eureka-debug-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <fileNamePattern>${APP_HOME}/logs/eureka-server_debug_%d{yyyy-MM-dd}.log</fileNamePattern>
             <!--日志文件保留天数-->
             <maxHistory>30</maxHistory>
         </rollingPolicy>
@@ -112,7 +112,7 @@
         </filter>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!--日志文件输出的文件名-->　　　　　　　
-            <fileNamePattern>${APP_HOME}/logs/eureka-trace-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <fileNamePattern>${APP_HOME}/logs/eureka-server_trace_%d{yyyy-MM-dd}.log</fileNamePattern>
             <!--日志文件保留天数-->
             <maxHistory>30</maxHistory>
         </rollingPolicy>

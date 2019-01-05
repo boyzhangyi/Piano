@@ -8,13 +8,11 @@ JAVA_HOME="/opt/java/jdk-11.0.1"
 
 #Ubuntu版本信息
 SYSTEM_VERSION=`head -n 1 /etc/issue`
-#执行程序启动所使用的系统用户，考虑到安全，推荐不使用root帐号
-RUNNING_USER=eden
 
 #Java程序所在的目录
 APP_NAME=eureka-server
 APP_VERSION=1.0.0.SNAPSHOT
-APP_HOME=/opt/shumei/$APP_NAME
+APP_HOME=/opt/shumei/$APP_NAME;export APP_HOME
 APP_LIB=$APP_HOME/lib
 APP_CONF=$APP_HOME/conf
 
@@ -33,16 +31,29 @@ JAVA_OPTS=""
 #使用awk，分割出pid ($1部分)，及Java程序名称($2部分)
 ###################################
 #初始化app_pid变量（全局）
+is_root=
 app_pid=0
 
 check_pid() {
-   app_process=`ps -ef | grep $APP_NAME | grep -v "grep"`
+    app_process=`ps -ef | grep $APP_NAME | grep -v "grep"`
 
-   if [ -n "$app_process" ]; then
-      app_pid=`echo $app_process | awk '{print $2}'`
-   else
-      app_pid=0
-   fi
+    if [ -n "$app_process" ]; then
+        app_pid=`echo $app_process | awk '{print $2}'`
+    else
+        app_pid=0
+    fi
+}
+
+check_root() {
+    if [ `whoami` == "root" ];then
+        echo "Root can not startup the app!"
+        exit 1
+    fi
+
+    if [ `id -u` -eq 0 ];then
+        echo "Root can not startup the app!"
+        exit 1
+    fi
 }
 
 ###################################
@@ -58,22 +69,23 @@ check_pid() {
 #注意: "nohup 某命令 >/dev/null 2>&1 &" 的用法
 ###################################
 start() {
-   check_pid
+    check_root
+    check_pid
 
-   if [ $app_pid -ne 0 ]; then
-      echo "================================"
-      echo "warn: $APP_NAME already started! (pid=$app_pid)"
-      echo "================================"
-   else
-      echo -n "Starting $APP_NAME ..."
-      nohup $JAVA_HOME/bin/java $JAVA_OPTS -jar $APP_LAUNCHER >$APP_HOME/logs/out.log 2>&1 &
-      check_pid
-      if [ $app_pid -ne 0 ]; then
-         echo "(pid=$app_pid) [OK]"
-      else
-         echo "[Failed]"
-      fi
-   fi
+    if [ $app_pid -ne 0 ]; then
+        echo "================================"
+        echo "warn: $APP_NAME already started! (pid=$app_pid)"
+        echo "================================"
+    else
+        echo -n "Starting $APP_NAME ..."
+        nohup $JAVA_HOME/bin/java $JAVA_OPTS -jar $APP_LAUNCHER >$APP_HOME/logs/piano.log 2>&1 &
+        check_pid
+        if [ $app_pid -ne 0 ]; then
+            echo "(pid=$app_pid) [OK]"
+        else
+            echo "[Failed]"
+        fi
+    fi
 }
 
 ###################################
@@ -90,26 +102,26 @@ start() {
 #注意: 在shell编程中，"$?" 表示上一句命令或者一个函数的返回值
 ###################################
 stop() {
-   check_pid
+    check_pid
 
-   if [ $app_pid -ne 0 ]; then
-      echo -n "Stopping $APP_NAME ...(pid=$app_pid) "
-      kill -9 $app_pid
-      if [ $? -eq 0 ]; then
-         echo "[OK]"
-      else
-         echo "[Failed]"
-      fi
+    if [ $app_pid -ne 0 ]; then
+        echo -n "Stopping $APP_NAME ...(pid=$app_pid) "
+        kill -9 $app_pid
+        if [ $? -eq 0 ]; then
+            echo "[OK]"
+        else
+            echo "[Failed]"
+        fi
 
-      check_pid
-      if [ $app_pid -ne 0 ]; then
-         stop
-      fi
-   else
-      echo "================================"
-      echo "warn: $APP_NAME is not running"
-      echo "================================"
-   fi
+        check_pid
+        if [ $app_pid -ne 0 ]; then
+            stop
+        fi
+    else
+        echo "================================"
+        echo "warn: $APP_NAME is not running"
+        echo "================================"
+    fi
 }
 
 ###################################
@@ -121,31 +133,31 @@ stop() {
 #3. 否则，提示程序未运行
 ###################################
 status() {
-   check_pid
+    check_pid
 
-   if [ $app_pid -ne 0 ];  then
-      echo "$APP_NAME is running! (pid=$app_pid)"
-   else
-      echo "$APP_NAME is not running"
-   fi
+    if [ $app_pid -ne 0 ];  then
+        echo "$APP_NAME is running! (pid=$app_pid)"
+    else
+        echo "$APP_NAME is not running"
+    fi
 }
 
 ###################################
 #(函数)打印系统环境参数
 ###################################
 info() {
-   echo "System Information:"
-   echo "****************************"
-   echo ${SYSTEM_VERSION:0:18}
-   echo `uname -a`
-   echo
-   echo `$JAVA_HOME/bin/java -version`
-   echo "JAVA_HOME=$JAVA_HOME"
-   echo "APP_NAME=$APP_NAME"
-   echo "APP_VERSION=$APP_VERSION"
-   echo "APP_HOME=$APP_HOME"
-   echo "APP_LAUNCHER=$APP_LAUNCHER"
-   echo "****************************"
+    echo "System Information:"
+    echo "****************************"
+    echo ${SYSTEM_VERSION:0:18}
+    echo `uname -a`
+    echo
+    echo `$JAVA_HOME/bin/java -version`
+    echo "JAVA_HOME=$JAVA_HOME"
+    echo "APP_NAME=$APP_NAME"
+    echo "APP_VERSION=$APP_VERSION"
+    echo "APP_HOME=$APP_HOME"
+    echo "APP_LAUNCHER=$APP_LAUNCHER"
+    echo "****************************"
 }
 
 ###################################
@@ -154,23 +166,23 @@ info() {
 #如参数不在指定范围之内，则打印帮助信息
 ###################################
 case "$1" in
-   'start')
-      start
-     ;;
-   'stop')
-     stop
-     ;;
-   'restart')
-     stop
-     start
-     ;;
-   'status')
-     status
-     ;;
-   'info')
-     info
-     ;;
-  *)
-     echo "Usage: $0 {start|stop|restart|status|info}"
-     exit 1
+    'start')
+        start
+        ;;
+    'stop')
+        stop
+        ;;
+    'restart')
+        stop
+        start
+        ;;
+    'status')
+        status
+        ;;
+    'info')
+        info
+        ;;
+    *)
+    echo "Usage: $0 {start|stop|restart|status|info}"
+    exit 1
 esac
