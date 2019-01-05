@@ -18,7 +18,7 @@ spring:
   security:
     user:
       name: luthier
-      password: 223666
+      password: '{cipher}8367b880b6a742b4216e92468eb034b754b42e4859d8b6ee5d7187701c0af58b'
   cloud:
     config:
       server:
@@ -28,7 +28,7 @@ spring:
           uri: https://github.com/boyzhangyi/Piano
           search-paths: deploy,deploy/*
           username: boyzhangyi@aliyun.com
-          password: z00223666
+          password: '{cipher}9a55555c16aab1248f1d276040f6b40675345d933c4f3227e3e5d034959121db'
           default-label: master
 
 from: Piano 1.0.0
