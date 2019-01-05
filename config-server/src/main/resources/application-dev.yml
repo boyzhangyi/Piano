@@ -15,6 +15,10 @@ eureka:
     lease-renewal-interval-in-seconds: 1
 
 spring:
+  security:
+    user:
+      name: luthier
+      password: 223666
   cloud:
     config:
       server:
