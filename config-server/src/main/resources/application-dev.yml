@@ -22,7 +22,7 @@ spring:
 #          search-locations: classpath:/shared
         git:
           uri: https://github.com/boyzhangyi/Piano
-          search-paths: deploy
+          search-paths: deploy,deploy/*
           username: boyzhangyi@aliyun.com
           password: z00223666
           default-label: master
