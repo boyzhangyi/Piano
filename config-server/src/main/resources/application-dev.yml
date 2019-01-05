@@ -1,10 +1,6 @@
 server:
   port: 8081
 
-spring:
-  application:
-    name: joke-service
-
 eureka:
   client:
     fetch-registry: true
@@ -17,3 +13,18 @@ eureka:
     lease-expiration-duration-in-seconds: 2
     # 每间隔1s，向服务端发送一次心跳，证明自己依然”存活“
     lease-renewal-interval-in-seconds: 1
+
+spring:
+  cloud:
+    config:
+      server:
+#        native:
+#          search-locations: classpath:/shared
+        git:
+          uri: https://github.com/boyzhangyi/Piano
+          search-paths: deploy
+          username: boyzhangyi@aliyun.com
+          password: z00223666
+          default-label: master
+
+from: Piano 1.0.0

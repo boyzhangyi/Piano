@@ -1,14 +1,23 @@
+spring:
+  security:
+    user:
+      name: luthier
+      password: 223666
+
 server:
   port: 8080
 
 eureka:
   instance:
-    hostname: 192.168.136.134
+    prefer-ip-address: true
+  server:
+    # 测试时关闭自我保护机制，保证不可用服务及时踢出
+    enable-self-preservation: false
   client:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://192.168.136.134:${server.port}/eureka
+      defaultZone: http://${spring.cloud.client.ip-address}:${server.port}/eureka
 
 
 from: Piano 1.0.0
