@@ -2,10 +2,13 @@ server:
   port: 8081
 
 eureka:
+  server:
+    name: luthier
+    password: '{cipher}8367b880b6a742b4216e92468eb034b754b42e4859d8b6ee5d7187701c0af58b'
   client:
     fetch-registry: true
     service-url:
-      defaultZone: http://luthier:223666@192.168.136.134:8080/eureka/
+      defaultZone: http://${eureka.server.name}:${eureka.server.password}@192.168.136.134:8080/eureka/
   instance:
     instance_id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
     prefer-ip-address: true
