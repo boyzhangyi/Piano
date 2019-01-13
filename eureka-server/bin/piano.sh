@@ -35,7 +35,7 @@ is_root=
 app_pid=0
 
 check_pid() {
-    app_process=`ps -ef | grep $APP_NAME | grep -v "grep"`
+    app_process=`ps -ef | grep java | grep $APP_NAME | grep -v "grep"`
 
     if [ -n "$app_process" ]; then
         app_pid=`echo $app_process | awk '{print $2}'`

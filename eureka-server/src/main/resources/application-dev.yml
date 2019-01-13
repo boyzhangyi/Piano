@@ -2,7 +2,7 @@ spring:
   security:
     user:
       name: luthier
-      password: 223666
+      password: '{cipher}8367b880b6a742b4216e92468eb034b754b42e4859d8b6ee5d7187701c0af58b'
 
 server:
   port: 8080
