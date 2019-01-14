@@ -1,4 +1,4 @@
-archivesBaseName = "shumei-config"
+archivesBaseName = "config-server"
 
 dependencies {
     compile "org.springframework.boot:spring-boot-starter-security"

@@ -2,5 +2,5 @@ rootProject.name = 'Piano'
 
 include 'eureka-server'
 include 'config-server'
-include 'bus'
+include 'stream-bus'
 include 'joke'
