@@ -59,3 +59,6 @@ https://blog.csdn.net/HALEN001/article/details/81137092
 - http://down.51cto.com/search.php 51CTO
 - https://www.jb51.net/books/ 脚本之家
 
+# 自动化测试
+- https://www.jianshu.com/p/39716ea15d99
+- https://www.cnblogs.com/meng1314-shuai/p/9031686.html
