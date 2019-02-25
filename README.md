@@ -5,6 +5,7 @@
 # Spring Cloud 1.0 升级 2.0 指导
 - https://blog.csdn.net/qq_36752632/article/details/79497130
 - https://gitee.com/lwydyby/springcloud-adplatform
+- http://www.cnblogs.com/cralor/p/9239976.html
 
 
 # 配置项加密存储，运行时解密
