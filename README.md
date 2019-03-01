@@ -7,6 +7,10 @@
 - https://gitee.com/lwydyby/springcloud-adplatform
 - http://www.cnblogs.com/cralor/p/9239976.html
 
+# Spring Cloud Gradle配置
+- https://my.oschina.net/u/3101282/blog/1837493
+- https://gitee.com/topanda/java-springboot-gradle-docker
+
 
 # 配置项加密存储，运行时解密
 - https://stackoverflow.com/questions/40079293/configuring-ssl-keys-for-spring-cloud-config-server/41524875#41524875%EF%BC%89
