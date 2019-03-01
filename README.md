@@ -65,5 +65,8 @@ https://blog.csdn.net/HALEN001/article/details/81137092
 - https://www.cnblogs.com/meng1314-shuai/p/9031686.html
 - https://blog.csdn.net/ywj_486/article/details/80940087
 - https://www.jianshu.com/p/e137031bc7db
+- http://npm.taobao.org/mirrors/chromedriver/
+- https://www.cnblogs.com/zzzhang/p/8036595.html
+- https://www.cnblogs.com/zzzhang/p/8043205.html
 
 # Mac安装包管理
