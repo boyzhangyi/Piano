@@ -63,3 +63,7 @@ https://blog.csdn.net/HALEN001/article/details/81137092
 # 自动化测试
 - https://www.jianshu.com/p/39716ea15d99
 - https://www.cnblogs.com/meng1314-shuai/p/9031686.html
+- https://blog.csdn.net/ywj_486/article/details/80940087
+- https://www.jianshu.com/p/e137031bc7db
+
+# Mac安装包管理
