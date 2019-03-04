@@ -7,9 +7,11 @@
 - https://gitee.com/lwydyby/springcloud-adplatform
 - http://www.cnblogs.com/cralor/p/9239976.html
 
+
 # Spring Cloud Gradle配置
 - https://my.oschina.net/u/3101282/blog/1837493
 - https://gitee.com/topanda/java-springboot-gradle-docker
+- https://docs.spring.io/dependency-management-plugin/docs/current-SNAPSHOT/reference/html/#dependency-management-configuration
 
 
 # 配置项加密存储，运行时解密
