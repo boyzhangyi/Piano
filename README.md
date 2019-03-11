@@ -7,12 +7,10 @@
 - https://gitee.com/lwydyby/springcloud-adplatform
 - http://www.cnblogs.com/cralor/p/9239976.html
 
-
 # Spring Cloud Gradle配置
 - https://my.oschina.net/u/3101282/blog/1837493
 - https://gitee.com/topanda/java-springboot-gradle-docker
-- https://docs.spring.io/dependency-management-plugin/docs/current-SNAPSHOT/reference/html/#dependency-management-configuration
-- https://www.jianshu.com/p/524eadeb0d12
+
 
 # 配置项加密存储，运行时解密
 - https://stackoverflow.com/questions/40079293/configuring-ssl-keys-for-spring-cloud-config-server/41524875#41524875%EF%BC%89
@@ -37,8 +35,6 @@
 - https://gitee.com/gaojunjie03/springboot-hichat
 - https://blog.csdn.net/u012702547/article/details/79135833?utm_source=blogxgwz2
 - https://github.com/lenve/vhr
-- https://www.iviewui.com/
-- https://github.com/iview
 
 
 # 动态污点分析
@@ -83,4 +79,15 @@ https://blog.csdn.net/HALEN001/article/details/81137092
 - https://blog.csdn.net/Chen_chong__/article/details/82950968
 - https://github.com/chenchong6/taobao-login/
 
+## Pyppeteer
+- https://github.com/miyakogi/pyppeteer
+- https://miyakogi.github.io/pyppeteer/
+
+## Selenium
+- https://www.seleniumhq.org/
+- https://www.seleniumhq.org/docs/
+- https://www.seleniumhq.org/download/
+- https://www.seleniumhq.org/download/maven.jsp
+
 # Mac安装包管理
+- https://docs.brew.sh/Installation
