@@ -50,7 +50,7 @@
 # Java学习
 - https://download.csdn.net/download/qianweifeng123/10281860
 - https://www.linuxidc.com/Linux/2017-02/140698.htm
--   FTP地址：ftp://ftp1.linuxidc.com
+ - FTP地址：ftp://ftp1.linuxidc.com
 -   用户名：ftp1.linuxidc.com
 -   密码：www.linuxidc.com
 -   在 2017年LinuxIDC.com/2月/Java 8实战(Java 8 in Action) 高清晰PDF中文完整版+随书源码/
