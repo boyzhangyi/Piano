@@ -56,12 +56,16 @@
 -   在 2017年LinuxIDC.com/2月/Java 8实战(Java 8 in Action) 高清晰PDF中文完整版+随书源码/
 
 # 前端框架
-https://www.iviewui.com/
-https://github.com/iview/iview
-https://github.com/hustcc/canvas-nest.js
+- https://www.iviewui.com/
+- https://github.com/iview/iview
+- https://github.com/hustcc/canvas-nest.js
 
-#Jetbrains Intellij IDEA激活
-https://blog.csdn.net/HALEN001/article/details/81137092
+# 微服务鉴权
+- https://www.jianshu.com/p/a3bc8c07c231
+- https://github.com/keets2012/microservice-integration
+
+# Jetbrains Intellij IDEA激活
+- https://blog.csdn.net/HALEN001/article/details/81137092
 
 # 电子书网站
 - http://www.banshujiang.cn/ 搬书匠
